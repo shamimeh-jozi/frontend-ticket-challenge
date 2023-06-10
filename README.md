@@ -14,6 +14,8 @@ you should show **another page** that shows the ticket id to the user.
 # API Standard
 
 * `GET /map`
+
+
 ‍‍‍```
 response body sample:
 ['m213', 'm654', 'm63', 'm6888']
@@ -44,6 +46,8 @@ in the response: 1 means reserved, and 0 means seat available to buy
 
 
 * `POST /map/<map_id>/ticket`
+
+
 ```
 request body sample:
 {

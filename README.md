@@ -15,12 +15,7 @@ you should show **another page** that shows the ticket id to the user.
 
 * `GET /map`
 
-
-‍‍‍```
-response body sample:
-['m213', 'm654', 'm63', 'm6888']
-
-```
+‍‍‍response body sample: ['m213', 'm654', 'm63', 'm6888']
 
 
 Get the list of map ids.
@@ -30,7 +25,7 @@ You should use this endpoint to get the list and choose one of the stadium maps 
 
 Get map detail and show seats
 
-```
+
 response body sample:
 [
    [0 0 1 0]
@@ -39,8 +34,6 @@ response body sample:
    [1 1 1 1]
 ]
 
-```
-
 
 in the response: 1 means reserved, and 0 means seat available to buy
 
@@ -48,13 +41,11 @@ in the response: 1 means reserved, and 0 means seat available to buy
 * `POST /map/<map_id>/ticket`
 
 
-```
 request body sample:
 {
 x: 2,
 y: 1
 }
-```
 
 Buy tickets
 `x` and `y` are Seat coordinates in the request

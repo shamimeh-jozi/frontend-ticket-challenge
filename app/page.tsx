@@ -2,9 +2,11 @@
 
 import { fetchMaps, fetchMapDetails } from "../services/api";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import SeatMap from "../components/SeatMap";
 
 const HomePage = () => {
+  const router = useRouter();
   const [maps, setMaps] = useState<string[]>([]);
   const [selectedMap, setSelectedMap] = useState<string>("");
   const [mapDetails, setMapDetails] = useState<number[][]>([]);
@@ -43,7 +45,12 @@ const HomePage = () => {
     setSelectedSeat((prevSeat) => (prevSeat === seatKey ? null : seatKey));
   };
 
-  const handleBuyTicket = () => {};
+  const handleBuyTicket = () => {
+    if (selectedSeat) {
+      const [x, y] = selectedSeat.split("-").map(Number);
+      router.push(`/payment?mapId=${selectedMap}&x=${x}&y=${y}`);
+    }
+  };
 
   return (
     <div className='container'>

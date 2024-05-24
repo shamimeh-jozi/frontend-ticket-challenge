@@ -74,3 +74,26 @@ body {
   color: #ef4444;
   margin-bottom: 16px;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input {
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+.input.error {
+  border-color: #ef4444;
+}

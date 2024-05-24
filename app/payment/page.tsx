@@ -34,6 +34,7 @@ const PaymentPage = () => {
     setProcessing(true);
     try {
       const { ticketId } = await buyTicket(mapId, Number(x), Number(y));
+      router.push(`/confirmation?ticketId=${ticketId}`);
     } catch (error) {
       setError("Payment failed. Please try again.");
       setProcessing(false);

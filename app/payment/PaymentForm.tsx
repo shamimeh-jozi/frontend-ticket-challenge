@@ -28,7 +28,7 @@ const PaymentForm: React.FC<PaymentFormProps> = ({ processing, onSubmit }) => {
           className={errors.firstName ? "input error" : "input"}
         />
         {errors.firstName && (
-          <p className='error'>{errors.firstName.message}</p>
+          <p className='error-message'>{errors.firstName.message}</p>
         )}
       </div>
       <div className='form-group'>
@@ -38,7 +38,9 @@ const PaymentForm: React.FC<PaymentFormProps> = ({ processing, onSubmit }) => {
           {...register("lastName", { required: "Last name is required" })}
           className={errors.lastName ? "input error" : "input"}
         />
-        {errors.lastName && <p className='error'>{errors.lastName.message}</p>}
+        {errors.lastName && (
+          <p className='error-message'>{errors.lastName.message}</p>
+        )}
       </div>
       <button
         type='submit'

@@ -97,3 +97,8 @@ body {
 .input.error {
   border-color: #ef4444;
 }
+
+.error-message {
+  color: #ef4444;
+  margin-top: 0px;
+}
